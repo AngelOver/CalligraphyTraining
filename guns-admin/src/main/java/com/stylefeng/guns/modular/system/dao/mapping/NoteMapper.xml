@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.NoteMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.Note">
+        <id column="id" property="id" />
+        <result column="pid" property="pid" />
+        <result column="type" property="type" />
+        <result column="userid" property="userid" />
+        <result column="title" property="title" />
+        <result column="text" property="text" />
+        <result column="is_show" property="isShow" />
+        <result column="is_top" property="isTop" />
+        <result column="is_wait" property="isWait" />
+        <result column="wait_status" property="waitStatus" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="version" property="version" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, pid, type, userid, title, text, is_show AS isShow, is_top AS isTop, is_wait AS isWait, wait_status AS waitStatus, createtime, updatetime, version
+    </sql>
+	
+	    	
+<!-- 	 * 查询指定时间范围便签 -->
+	<select id="selectListByMap" resultType="map" parameterType="map">
+			SELECT * FROM note   where 1=1 
+		
+		
+		<if test="userid != null and userid !=''">
+			and userid   = #{userid} 
+		</if>
+		<if test="is_top != null and is_top !=''">
+			and is_top   = #{is_top} 
+		</if>
+			<if test="is_show != null and is_show !=''">
+			and is_show   = #{is_show} 
+		</if>
+			<if test="wait_status != null and wait_status !=''">
+			and is_show   = #{is_show} 
+		</if>
+			<if test="is_wait != null and is_wait !=''">
+			and is_wait   = #{is_wait} 
+		</if>
+		order by is_top DESC ,createtime DESC LIMIT 0,10
+		
+	
+	</select>
+
+</mapper>
