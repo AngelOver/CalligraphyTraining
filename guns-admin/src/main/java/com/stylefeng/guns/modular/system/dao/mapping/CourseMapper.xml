@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.CourseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.Course">
+        <id column="id" property="id" />
+        <result column="studentid" property="studentid" />
+        <result column="teacherid" property="teacherid" />
+        <result column="time" property="time" />
+        <result column="title" property="title" />
+        <result column="image" property="image" />
+        <result column="theme" property="theme" />
+        <result column="summary" property="summary" />
+        <result column="keywords" property="keywords" />
+        <result column="content" property="content" />
+        <result column="remark" property="remark" />
+        <result column="reply" property="reply" />
+        <result column="message" property="message" />
+        <result column="status" property="status" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, studentid, teacherid, time, title, image, theme, summary, keywords, content, remark, reply, message, status, createtime, updatetime
+    </sql>
+
+</mapper>

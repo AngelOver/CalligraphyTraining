@@ -1,0 +1,48 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="主键id" underline="true"/>
+                            <#input id="cateoryid" name="课程分类id" underline="true"/>
+                            <#input id="teaid" name="开课人id" underline="true"/>
+                            <#input id="teaname" name="开课人" underline="true"/>
+                            <#input id="name" name="课程名" underline="true"/>
+                            <#input id="code" name="课程编码" underline="true"/>
+                            <#input id="title" name="标题" underline="true"/>
+                            <#input id="theme" name="主题" underline="true"/>
+                            <#input id="summary" name="摘要" underline="true"/>
+                       
+                            <#input id="address" name="地址"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="range" name="课程时间段" underline="true"/>
+                            <#input id="starttime" name="开始时间" underline="true"/>
+                            <#input id="endtime" name="结束时间" underline="true"/>
+                            <#input id="totalcount" name="总课时数" underline="true"/>
+                            <#input id="nowcount" name="当前课时数" underline="true"/>
+                           
+     						<#input id="keywords" name="关键词" underline="true"/>
+                            <#input id="content" name="内容" underline="true"/>
+                            <#input id="remark" name="备注" underline="true"/>
+                             <#input id="status" name="状态(0 未开始 1 进行中 2 已完成 3未完成 4已过期)" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="SubjectInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="SubjectInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/calligraphy/subject/subject_info.js"></script>
+@}

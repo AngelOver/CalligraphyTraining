@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.SubjectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.Subject">
+        <id column="id" property="id" />
+        <result column="cateoryid" property="cateoryid" />
+        <result column="teaid" property="teaid" />
+        <result column="teaname" property="teaname" />
+        <result column="name" property="name" />
+        <result column="code" property="code" />
+        <result column="title" property="title" />
+        <result column="theme" property="theme" />
+        <result column="summary" property="summary" />
+        <result column="keywords" property="keywords" />
+        <result column="content" property="content" />
+        <result column="remark" property="remark" />
+        <result column="address" property="address" />
+        <result column="range" property="range" />
+        <result column="starttime" property="starttime" />
+        <result column="endtime" property="endtime" />
+        <result column="totalcount" property="totalcount" />
+        <result column="nowcount" property="nowcount" />
+        <result column="status" property="status" />
+        <result column="createid" property="createid" />
+        <result column="createname" property="createname" />
+        <result column="createtime" property="createtime" />
+        <result column="updateid" property="updateid" />
+        <result column="updatename" property="updatename" />
+        <result column="updatetime" property="updatetime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cateoryid, teaid, teaname, name, code, title, theme, summary, keywords, content, remark, address, range, starttime, endtime, totalcount, nowcount, status, createid, createname, createtime, updateid, updatename, updatetime
+    </sql>
+
+</mapper>
