@@ -1,6 +1,7 @@
 # CalligraphyTraining
 书法培训平台-墨融轩-公众号
 
+环境配置：jdk1.8.151 tomcat8.5 maven 3.5
 
 系统初始化
 1 导入maven项目，选定perant项目，导入。

@@ -4,7 +4,7 @@
 
 系统初始化
 1 导入maven项目，选定perant项目，导入。
-2 导入数据库 admin 项目下sql目录，先后导入guns.sql 和 guns_update.sql
+2 导入数据库 admin 项目下sql目录，先后导入ct_guns.sql 和 ct_guns_update.sql
 
 启动方式
 1 编译器启动：
